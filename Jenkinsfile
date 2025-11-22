@@ -1,6 +1,10 @@
 pipeline {
     agent any
     
+    parameters {
+        booleanParam(name: 'executeTests', defaultValue: true)
+    }
+    
     environment {
         VERSION = '1.0.0'
     }
