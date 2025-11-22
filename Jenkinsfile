@@ -17,10 +17,11 @@ pipeline {
                 echo 'Deploying..'
             }
         }
-        post {
-            always {
-                echo 'Pipeline Completed'
-            }
+    }
+    
+    post {
+        always {
+            echo 'Pipeline Completed'
         }
     }
 }
