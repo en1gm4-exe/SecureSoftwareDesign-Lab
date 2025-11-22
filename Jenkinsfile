@@ -17,8 +17,11 @@ pipeline {
             }
         }
         stage('Test') {
+            when {
+                expression { params.executeTests == true }
+            }
             steps {
-                echo 'Testing..'
+                echo 'Testing with conditions..'
             }
         }
         stage('Deploy') {
